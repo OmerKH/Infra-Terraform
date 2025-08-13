@@ -1,0 +1,16 @@
+# Terraform
+**/.terraform/*
+**/.terraform.lock.hcl
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+terraform.tfplan
+terraform.tfplan.*
+*.backup
+*.log
+*.crash
+
+# Terraform provider binaries
+**/.terraform/providers/**/*
+**/.terraform/providers/registry.terraform.io/**/* 
