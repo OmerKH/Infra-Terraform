@@ -14,11 +14,11 @@ resource "helm_release" "nginx_ingress" {
           enabled = true
         }
         service = {
-          type = "ClusterIP"
+          type = "NodePort"
         }
         ingressClassResource = {
           name            = "nginx"
-          enabled         = true
+          enabled         = false  # Don't create new IngressClass, use existing
           default         = true
           controllerValue = "k8s.io/ingress-nginx"
         }

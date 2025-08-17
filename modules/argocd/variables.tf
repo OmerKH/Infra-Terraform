@@ -15,5 +15,5 @@ variable "chart_version" {
 
 variable "ingress_host" {
   type    = string
-  default = "192.168.1.109"
+  default = "argocd.127.0.0.1.nip.io"
 }
