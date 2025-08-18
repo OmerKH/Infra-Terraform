@@ -1,3 +1,3 @@
 output "argocd_url" {
-  value = "http://localhost:${var.node_port}"
+  value = "http://localhost:${var.nodePort}"
 }

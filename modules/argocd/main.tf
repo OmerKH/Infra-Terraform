@@ -19,7 +19,7 @@ resource "helm_release" "argocd" {
             server: {
                 service: {
                     type: "NodePort"
-                    node_port: var.node_port #30080
+                    node_port: var.nodePort #30080
                 }
             }
         })
