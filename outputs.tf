@@ -1,5 +1,5 @@
-# output "argocd_url" {
-#   value = "http://localhost:30080"
-# }
+output "argocd_url" {
+  value = "http://localhost:30080"
+}
 
 
