@@ -8,3 +8,8 @@ variable "kubeconfig" {
 variable "environment" {
   default = "dev"
 }
+
+variable "chart_version" {
+  type    = string
+  default = "7.7.8"
+}

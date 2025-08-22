@@ -7,7 +7,7 @@ resource "kubernetes_namespace" "argocd" {
 
 resource "helm_release" "argocd" {
     name       = "argocd"
-    namespace  = "argocd"
+    namespace  = var.namespace
     repository = "https://argoproj.github.io/argo-helm"
     chart      = "argo-cd"
     version    = var.chart_version #"4.10.8"
@@ -15,14 +15,20 @@ resource "helm_release" "argocd" {
     create_namespace = false  
 
     values = [
-        yamlencode({
-            server: {
-                service: {
-                    type: "NodePort"
-                    node_port: var.nodePort #30080
-                }
-            }
-        })
-        ]
+    yamlencode({
+      server = {
+        ingress = {
+          enabled = true
+          ingressClassName = "nginx"
+          hostname          = "localhost"
+          paths             = ["/"]
+          pathType          = "Prefix"
+        }
+        service = {
+          type = "ClusterIP"
+        }
+      }
+    })
+  ]
         depends_on = [kubernetes_namespace.argocd]
 }

@@ -1,3 +1,3 @@
-output "argocd_url" {
-  value = "http://localhost:${var.nodePort}"
-}
+# output "argocd_url" {
+#   value = "http://localhost:${var.nodePort}"
+# }

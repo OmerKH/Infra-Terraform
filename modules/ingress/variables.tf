@@ -3,7 +3,7 @@ variable "namespace" {
   default     = "argocd"
 }
 
-# variable "node_port" {
+# variable "nodePort" {
 #   type    = number
 #   default = 30080
 # }
@@ -16,6 +16,7 @@ variable "chart_version" {
 variable "environment" {
   description = "Environment name"
   type        = string
+  default     = "dev"
 }
 #------------------------------------------------------#
 
