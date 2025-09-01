@@ -1,7 +1,7 @@
 module "argocd" {
   source        = "./modules/argocd"
   namespace     = "argocd"
-  chart_version = "7.7.8"
+  chart_version = var.chart_version
   environment   = var.environment
 }
 
