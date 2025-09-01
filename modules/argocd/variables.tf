@@ -10,7 +10,7 @@ variable "namespace" {
 
 variable "chart_version" {
   type    = string
-  default = "7.7.8"
+  default = "8.3.2"
 }
 
 variable "environment" {
